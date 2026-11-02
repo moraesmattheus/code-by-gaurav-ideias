@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  PROJETO: Barras de Habilidades e Progresso Animadas
+  ORIGEM: CodeByGaurav (Gaurav Sisodiya - Tutoriais de Frontend)
+  DATA DE CRIAÇÃO: 01/11/2026
+  O QUE É: Barras horizontais com preenchimento animado gradual e porcentagens destacadas para exibir competências.
+  FINALIDADE / APLICAÇÃO: Indispensável em portfólios profissionais, páginas de 'Sobre Nós' ou dashboards de metas alcançadas.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Bar | CodeByGaurav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="skill-box">
+        <div class="title">Technical Mastery</div>
+
+        <div class="bar">
+            <div class="info">
+                <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            </div>
+            <div class="track">
+                <div class="fill" style="--w:95%; --clr:#ff4d4d; --delay:0.1s;">
+                    <span class="tooltip">95%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            </div>
+            <div class="track">
+                <div class="fill" style="--w:90%; --clr:#2196f3; --delay:0.3s;">
+                    <span class="tooltip">90%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            </div>
+            <div class="track">
+                <div class="fill" style="--w:75%; --clr:#ffeb3b; --delay:0.5s;">
+                    <span class="tooltip">75%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar">
+            <div class="info">
+                <span><i class="fa-brands fa-react"></i> React JS</span>
+            </div>
+            <div class="track">
+                <div class="fill" style="--w:70%; --clr:#00d8ff; --delay:0.7s;">
+                    <span class="tooltip">70%</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

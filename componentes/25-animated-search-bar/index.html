@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Busca Animada | CodeByGaurav</title>
+    <!--
+      PROJETO: Barra de Busca Expansível com Efeito Glassmorphism
+      ORIGEM: CodeByGaurav (Search Bar UI Tutorial)
+      DATA: 01/11/2026
+      O QUE É: Componente de pesquisa com expansão dinâmica e sugestões rápidas.
+      FINALIDADE: Otimizar espaço no menu e facilitar a navegação do usuário.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-box" id="searchBox">
+            <button class="search-icon-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" id="searchInput" placeholder="O que você está procurando hoje?">
+            <button class="clear-btn" id="clearBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="suggestions-box">
+            <span class="sug-label">Sugestões em alta:</span>
+            <div class="tags">
+                <span class="tag">Landing Page</span>
+                <span class="tag">Design de UI</span>
+                <span class="tag">Marketing Digital</span>
+                <span class="tag">Desenvolvimento Web</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

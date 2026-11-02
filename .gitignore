@@ -1,0 +1,17 @@
+# Dependências e ambientes
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Segredos e variáveis de ambiente
+.env
+.env.local
+*.bin
+tokens/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db

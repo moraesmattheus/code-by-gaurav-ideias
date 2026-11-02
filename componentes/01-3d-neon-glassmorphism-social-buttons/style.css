@@ -1,0 +1,110 @@
+/* ==========================================================================
+   PROJETO: Botões Sociais 3D Neon Glassmorphism - Estilos CSS
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Botões tridimensionais em camadas com efeito de vidro fosco e iluminação neon colorida em hover.
+   FINALIDADE: Estilização moderna e responsiva de alta performance visual.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0a0c14; /* Dark futuristic background */
+    overflow: hidden;
+}
+
+/* 3D Perspective Container */
+.glass-container {
+    display: flex;
+    gap: 25px;
+    perspective: 1000px;
+}
+
+/* Base Glassmorphism Card */
+.glass-btn {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    
+    /* Smooth 3D Motion Transitions */
+    transform-style: preserve-3d;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s ease,
+                border-color 0.5s ease;
+}
+
+.glass-btn .icon-box {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.glass-btn .icon {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.glass-btn .text {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: 0.8px;
+    opacity: 0;
+    transform: translateZ(20px) translateX(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    white-space: nowrap;
+}
+
+/* --- Interactive 3D Lift & Glow Mechanics --- */
+
+.glass-btn:hover {
+    width: 200px;
+    border-color: var(--clr);
+    transform: translateY(-10px) rotateX(15deg) rotateY(-10deg) translateZ(10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6),
+                0 0 25px var(--clr);
+}
+
+.glass-btn:hover .icon {
+    color: var(--clr);
+    transform: translateZ(30px) scale(1.1);
+    filter: drop-shadow(0 0 8px var(--clr));
+}
+
+.glass-btn:hover .text {
+    opacity: 1;
+    transform: translateZ(25px) translateX(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .glass-container {
+        flex-direction: column;
+    }
+}

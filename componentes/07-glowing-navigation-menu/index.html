@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  PROJETO: Menu com Indicador Fluido Brilhante (Glow)
+  ORIGEM: CodeByGaurav (Gaurav Sisodiya - Tutoriais de Frontend)
+  DATA DE CRIAÇÃO: 01/11/2026
+  O QUE É: Barra de navegação flutuante com curva suave e luz indicadora que desliza dinamicamente para o item ativo.
+  FINALIDADE / APLICAÇÃO: Perfeito para navegação inferior em mobile (Bottom Navigation Bar) em web apps ou sites modernos.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Navigation Menu | CodeByGaurav</title>
+    <link rel="stylesheet" href="CodeByGaurav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+
+            <li class="list active" style="--clr:#f44336;">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-regular fa-house"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li class="list" style="--clr:#ffa117;">
+                <a href="#">
+                    <span class="icon">
+                       <i class="fa-regular fa-user"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li class="list" style="--clr:#0fc70f;">
+                <a href="#">
+                    <span class="icon">
+                       <i class="fa-regular fa-comment"></i>
+                    </span>
+                </a>
+            </li>
+
+             <li class="list" style="--clr:#2196f3;">
+                <a href="#">
+                    <span class="icon">
+                       <i class="fa-regular fa-camera"></i>
+                    </span>
+                </a>
+            </li>
+
+             <li class="list" style="--clr:#b145e9;">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

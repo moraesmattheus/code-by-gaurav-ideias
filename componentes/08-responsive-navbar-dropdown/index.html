@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<!--
+  PROJETO: Navbar Responsiva Completa com Dropdown e Mobile
+  ORIGEM: CodeByGaurav (Gaurav Sisodiya - Tutoriais de Frontend)
+  DATA DE CRIAÇÃO: 01/11/2026
+  O QUE É: Menu de navegação clássico e elegante com suporte a submenus dropdown e menu hambúrguer para celulares.
+  FINALIDADE / APLICAÇÃO: A estrutura padrão ideal para qualquer site institucional, portal de notícias ou loja virtual.
+-->
+
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Navbar</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">CodeByGaurav</div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+
+                <li class="dropdown">
+                    <a href="#">Projects</a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML Projects</a></li>
+                        <li><a href="#">CSS Projects</a></li>
+                        <li><a href="#">JavaScript Projects</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+
+        <script src="script.js"></script>
+    </body>
+</html>

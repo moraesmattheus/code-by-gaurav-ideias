@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Código OTP | CodeByGaurav</title>
+    <!--
+      PROJETO: Tela de Verificação OTP de 6 Dígitos
+      ORIGEM: CodeByGaurav (Vídeo viral de OTP Verification UI)
+      DATA: 01/11/2026
+      O QUE É: Interface moderna para digitação de código de segurança de 6 números.
+      FINALIDADE: Aumentar segurança e confiabilidade no processo de login/recuperação.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="otp-card">
+        <div class="otp-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h2>Verificação de Segurança</h2>
+        <p class="subtitle">Insira o código de 6 dígitos enviado para seu WhatsApp ou e-mail cadastrado.</p>
+
+        <form class="otp-form" id="otpForm">
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="otp-box" autofocus>
+                <input type="text" maxlength="1" class="otp-box">
+                <input type="text" maxlength="1" class="otp-box">
+                <input type="text" maxlength="1" class="otp-box">
+                <input type="text" maxlength="1" class="otp-box">
+                <input type="text" maxlength="1" class="otp-box">
+            </div>
+
+            <button type="submit" class="verify-btn" id="verifyBtn">Verificar Código</button>
+        </form>
+
+        <div class="resend-block">
+            <span>Não recebeu o código?</span>
+            <a href="#" id="resendLink" class="resend-link">Reenviar (<span id="timer">30</span>s)</a>
+        </div>
+        <div class="status-msg" id="statusMsg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

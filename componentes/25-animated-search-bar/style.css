@@ -1,0 +1,145 @@
+/* ==========================================================================
+   PROJETO: Barra de Busca Animada - Estilos
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Design moderno com transição de largura e suporte a tags interativas.
+   FINALIDADE: Busca intuitiva que economiza espaço de tela.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    width: 60px;
+    height: 60px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    position: relative;
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), border-color 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.search-box.active {
+    width: 100%;
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
+}
+
+.search-icon-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #38bdf8;
+    border: none;
+    color: #0f172a;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.search-box.active .search-icon-btn {
+    transform: rotate(360deg);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #f8fafc;
+    font-size: 15px;
+    padding: 0 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-box.active input {
+    opacity: 1;
+}
+
+.clear-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.clear-btn:hover {
+    color: #ef4444;
+}
+
+/* Sugestões Rápidas */
+.suggestions-box {
+    margin-top: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.sug-label {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tag {
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.25s ease;
+}
+
+.tag:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    transform: translateY(-2px);
+}

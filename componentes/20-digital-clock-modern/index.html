@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  PROJETO: Relógio Digital Neon com Horas, Minutos e Segundos
+  ORIGEM: CodeByGaurav (Gaurav Sisodiya - Tutoriais de Frontend)
+  DATA DE CRIAÇÃO: 01/11/2026
+  O QUE É: Display digital luminoso com efeito neon em tons ciano/magenta, exibição de AM/PM e animação contínua de pulso.
+  FINALIDADE / APLICAÇÃO: Ideal para páginas de contagem regressiva para lançamentos (black friday/eventos) ou sites de eventos ao vivo.
+-->
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="brand">
+          <div class="logo">CL</div>
+          <div>
+            <div class="title">Digital Clock</div>
+            <div class="subtitle">12/24 hour - Dark mode only</div>
+          </div>
+        </div>
+        <div class="toggle">
+            <div class="btn activeToggle" id="btn-12">12 hr</div>
+             <div class="btn" id="btn-24">24 hr</div>
+        </div>
+      </div>
+
+      <div class="display">
+        <div class="time-wrap">
+            <div class="time" id="time">00:00:00</div>
+            <div class="ampm" id="ampm">AM</div>
+        </div>
+        <div class="meta">
+            <div id="date">January 1, 2025</div>
+            <div id="day">Monday</div>
+        </div>
+      </div>
+
+      <div class="foot">
+        <div>Auto updates every second</div>
+        <div>Local Time</div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Interativo com Lâmpada | CodeByGaurav</title>
+    <!--
+      PROJETO: Formulário de Login com Lâmpada Interativa (Pull Chain)
+      ORIGEM: CodeByGaurav (Projeto Destaque em Animações Criativas)
+      DATA: 01/11/2026
+      O QUE É: Interface lúdica com cordão clicável que ilumina o cenário.
+      FINALIDADE: Criar uma experiência marcante e memorável no acesso ao site.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode" id="scene">
+    <!-- Lâmpada Suspensa com Cordão -->
+    <div class="lamp-container">
+        <div class="lamp-wire"></div>
+        <div class="lamp-shade"></div>
+        <div class="lamp-bulb" id="bulb"></div>
+        <div class="lamp-light" id="lightCone"></div>
+        <div class="lamp-chain" id="pullChain" title="Clique ou puxe para acender/apagar a luz">
+            <div class="chain-beads"></div>
+            <div class="chain-knob"></div>
+        </div>
+    </div>
+
+    <!-- Formulário Iluminado -->
+    <div class="login-box" id="loginBox">
+        <div class="brand-badge">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <h2>Acesse sua Conta</h2>
+        <p class="hint">Puxe o cordão da lâmpada para ligar a iluminação!</p>
+
+        <form>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Seu e-mail" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Sua senha" required>
+            </div>
+            <div class="options">
+                <label><input type="checkbox"> Lembrar de mim</label>
+                <a href="#">Esqueceu?</a>
+            </div>
+            <button type="submit" class="submit-btn">Entrar na Plataforma</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

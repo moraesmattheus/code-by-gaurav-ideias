@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  PROJETO: Navbar Responsiva sem JavaScript (CSS Checkbox)
+  ORIGEM: CodeByGaurav (Gaurav Sisodiya - Tutoriais de Frontend)
+  DATA DE CRIAÇÃO: 01/11/2026
+  O QUE É: Menu de navegação 100% construído em HTML e CSS, utilizando o truque do checkbox para abrir o menu mobile sem scripts.
+  FINALIDADE / APLICAÇÃO: Perfeito para páginas ultrarrápidas onde tempo de carregamento e Core Web Vitals (LCP/CLS) são prioridade máxima.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar | CodeByGaurav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <input type="checkbox" id="check">
+            <div class="logo"><a href="#">CodeByGaurav</a></div>
+            <ul>
+                <label class="btn cancel" for="check">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+            <label class="btn bars" for="check"><i class="fa-solid fa-bars"></i></label>
+        </div>
+    </nav>
+</body>
+</html>

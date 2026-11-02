@@ -1,0 +1,229 @@
+/* ==========================================================================
+   PROJETO: Login com Lâmpada - Estilos
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Efeitos de iluminação radial e estados claro/escuro com transições.
+   FINALIDADE: Simulação realista de interruptor de luz em quarto escuro.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.6s ease;
+}
+
+body.dark-mode {
+    background: #0b0f19;
+}
+
+body.light-mode {
+    background: #1e293b;
+}
+
+/* 1. Estrutura da Lâmpada */
+.lamp-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.lamp-wire {
+    width: 3px;
+    height: 70px;
+    background: #64748b;
+}
+
+.lamp-shade {
+    width: 70px;
+    height: 35px;
+    background: #334155;
+    border-radius: 40px 40px 0 0;
+    border: 2px solid #475569;
+}
+
+.lamp-bulb {
+    width: 26px;
+    height: 26px;
+    background: #475569;
+    border-radius: 50%;
+    margin-top: -6px;
+    transition: all 0.4s ease;
+}
+
+body.light-mode .lamp-bulb {
+    background: #fef08a;
+    box-shadow: 0 0 35px 12px #fde047;
+}
+
+/* Cone de Luz projetado sobre o formulário */
+.lamp-light {
+    position: absolute;
+    top: 90px;
+    width: 450px;
+    height: 500px;
+    background: radial-gradient(ellipse at top, rgba(254, 240, 138, 0.35) 0%, rgba(254, 240, 138, 0.05) 55%, transparent 75%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.light-mode .lamp-light {
+    opacity: 1;
+}
+
+/* Cordão do Interruptor */
+.lamp-chain {
+    position: absolute;
+    top: 95px;
+    right: -45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lamp-chain:active {
+    transform: translateY(18px);
+}
+
+.chain-beads {
+    width: 2px;
+    height: 60px;
+    background: repeating-linear-gradient(to bottom, #cbd5e1 0px, #cbd5e1 4px, transparent 4px, transparent 7px);
+}
+
+.chain-knob {
+    width: 10px;
+    height: 14px;
+    background: #e2e8f0;
+    border-radius: 4px;
+}
+
+/* 2. Caixa de Login */
+.login-box {
+    margin-top: 100px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 35px 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    z-index: 5;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+body.light-mode .login-box {
+    border-color: rgba(254, 240, 138, 0.4);
+    box-shadow: 0 20px 50px rgba(254, 240, 138, 0.25);
+}
+
+.brand-badge {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #94a3b8;
+    transition: all 0.4s ease;
+}
+
+body.light-mode .brand-badge {
+    color: #fde047;
+    background: rgba(254, 240, 138, 0.15);
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.hint {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #f8fafc;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #fde047;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.options a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #fde047;
+    color: #0f172a;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #fef08a;
+    box-shadow: 0 0 20px rgba(253, 224, 71, 0.5);
+    transform: translateY(-2px);
+}
