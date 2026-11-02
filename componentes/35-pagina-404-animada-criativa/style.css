@@ -1,0 +1,111 @@
+/* ==========================================================================
+   PROJETO: Página 404 Criativa - Estilos CSS
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Animação espacial de flutuação contínua em keyframes.
+   FINALIDADE: Experiência amigável que não perde o tráfego do anúncio.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #060911;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.error-container {
+    max-width: 520px;
+}
+
+/* Astronauta e Planeta */
+.floating-asset {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+}
+
+.astronaut-icon {
+    font-size: 72px;
+    color: #38bdf8;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    animation: floatAstronaut 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.5));
+}
+
+.planet {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #6366f1 0%, #312e81 80%);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+}
+
+.error-code {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.error-msg {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14.5px;
+    font-weight: 700;
+    transition: all 0.3s;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #0369a1, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.6);
+}
+
+@keyframes floatAstronaut {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-16px) rotate(8deg);
+    }
+}

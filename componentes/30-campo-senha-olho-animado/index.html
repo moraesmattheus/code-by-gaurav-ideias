@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/Ocultar Senha Interativo | CodeByGaurav</title>
+    <!--
+      PROJETO: Campo de Senha com Alternância Mostrar/Ocultar e Olho Animado
+      ORIGEM: CodeByGaurav (Vídeo de Show/Hide Password Animation)
+      DATA: 01/11/2026
+      O QUE É: Input moderno com ícone de olho que pisca e abre/fecha a visão da senha digitada.
+      FINALIDADE: Melhorar a usabilidade e diminuir erros de digitação em logins e cadastros.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h2>Criar Senha de Acesso</h2>
+        <p class="subtitle">Digite uma senha forte e clique no olho para conferir.</p>
+
+        <div class="input-group">
+            <i class="fa-solid fa-lock key-icon"></i>
+            <input type="password" id="passwordInput" placeholder="Sua senha secreta" value="Marez@2026#Dev">
+            <button type="button" class="toggle-eye-btn" id="toggleEye" title="Ver / Ocultar Senha">
+                <i class="fa-solid fa-eye-slash" id="eyeIcon"></i>
+            </button>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-bar" id="strengthBar"></div>
+        </div>
+        <span class="strength-text" id="strengthText">Segurança: Forte</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

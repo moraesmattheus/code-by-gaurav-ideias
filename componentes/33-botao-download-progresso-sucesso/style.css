@@ -1,0 +1,88 @@
+/* ==========================================================================
+   PROJETO: Botão de Download com Progresso - Estilos CSS
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Transição de botão de ação para medidor percentual com feedback tátil.
+   FINALIDADE: Captação de leads com materiais ricos (iscas digitais).
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #090d16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.download-container {
+    text-align: center;
+    max-width: 440px;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.desc {
+    color: #94a3b8;
+    font-size: 13.5px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.download-btn {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background: #1e293b;
+    border: 1.5px solid #38bdf8;
+    border-radius: 14px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    transition: width 0.1s linear;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.download-btn.complete {
+    border-color: #22c55e;
+}
+
+.download-btn.complete .progress-bar {
+    background: #22c55e;
+}

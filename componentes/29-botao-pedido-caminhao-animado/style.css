@@ -1,0 +1,173 @@
+/* ==========================================================================
+   PROJETO: Botão de Pedido com Caminhão - Estilos CSS
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Transição complexa de elementos CSS com keyframes encadeados.
+   FINALIDADE: Feedback gamificado de compra para lojas virtuais.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #090d16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.checkout-box {
+    text-align: center;
+    max-width: 420px;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.desc {
+    color: #94a3b8;
+    font-size: 13.5px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Botão do Caminhão */
+.order-btn {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background: #2563eb;
+    border: none;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #1d4ed8;
+}
+
+.default-text, .success-text {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.success-text {
+    opacity: 0;
+    transform: translateY(20px);
+    color: #22c55e;
+}
+
+/* Caminhão e Caixa */
+.truck-box {
+    position: absolute;
+    left: -100px;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 2.5s cubic-bezier(0.68, -0.2, 0.27, 1.2);
+}
+
+.box-parcel {
+    width: 14px;
+    height: 14px;
+    background: #f59e0b;
+    border: 1px solid #d97706;
+    border-radius: 2px;
+    margin-right: 4px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease 0.4s;
+}
+
+.truck {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.truck-body {
+    width: 32px;
+    height: 22px;
+    background: #ffffff;
+    border-radius: 4px 0 0 2px;
+}
+
+.truck-cab {
+    width: 16px;
+    height: 16px;
+    background: #38bdf8;
+    border-radius: 0 6px 0 0;
+    position: relative;
+}
+
+.truck-cab::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 6px;
+    height: 6px;
+    background: #0f172a;
+    border-radius: 0 2px 0 0;
+}
+
+.wheel {
+    width: 8px;
+    height: 8px;
+    background: #0f172a;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -4px;
+    border: 1.5px solid #94a3b8;
+}
+
+.wheel-front { right: 2px; }
+.wheel-back { left: 4px; }
+
+/* Estado Animando */
+.order-btn.animate .default-text {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.order-btn.animate .truck-box {
+    transform: translateX(520px);
+}
+
+.order-btn.animate .box-parcel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.order-btn.done {
+    background: #1e293b;
+    border: 1px solid #22c55e;
+}
+
+.order-btn.done .success-text {
+    opacity: 1;
+    transform: translateY(-50%);
+}

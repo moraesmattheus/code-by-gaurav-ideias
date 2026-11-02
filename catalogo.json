@@ -306,5 +306,82 @@
     "ideia": "Essencial para páginas de precificação de softwares, agências e cursos para alavancar faturamento anual.",
     "has_js": true,
     "path": "componentes/28-seletor-planos-mensal-anual/index.html"
+  },
+  {
+    "id": "29-botao-pedido-caminhao-animado",
+    "num": "29",
+    "title": "Botão de Pedido com Caminhão de Entrega Animado",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Ao clicar, o botão se transforma num caminhão que carrega a encomenda e acelera pela tela, confirmando o pedido.",
+    "ideia": "Ideal para checkouts de e-commerce e finalização de compras, gerando dopamina e confirmação imediata.",
+    "has_js": true,
+    "path": "componentes/29-botao-pedido-caminhao-animado/index.html"
+  },
+  {
+    "id": "30-campo-senha-olho-animado",
+    "num": "30",
+    "title": "Campo de Senha com Olho Interativo (Show/Hide)",
+    "cat": "auth",
+    "cat_name": "🔐 Autenticação & Formulários",
+    "desc": "Input de senha com ícone de olho animado para revelar e ocultar a senha digitada, com medidor de força integrado.",
+    "ideia": "Essencial para qualquer tela de login, cadastro ou redefinição de senha para evitar erros do usuário.",
+    "has_js": true,
+    "path": "componentes/30-campo-senha-olho-animado/index.html"
+  },
+  {
+    "id": "31-formulario-multi-etapas-progresso",
+    "num": "31",
+    "title": "Formulário Multi-Etapas com Indicador de Progresso",
+    "cat": "auth",
+    "cat_name": "🔐 Autenticação & Formulários",
+    "desc": "Formulário sequencial em 3 etapas com linhas de progresso dinâmicas, reduzindo o atrito de cadastros longos.",
+    "ideia": "Perfeito para onboarding de clientes em agências, formulários de briefing ou cotações de seguros.",
+    "has_js": true,
+    "path": "componentes/31-formulario-multi-etapas-progresso/index.html"
+  },
+  {
+    "id": "32-card-produto-3d-flutuante",
+    "num": "32",
+    "title": "Card de Produto 3D com Imagem Flutuante",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Card de vitrine onde o produto salta para fora do card e gira suavemente em 3D ao passar o mouse.",
+    "ideia": "Ideal para lojas virtuais e landing pages de produtos físicos (smartwatches, tênis, bebidas e eletrônicos).",
+    "has_js": false,
+    "path": "componentes/32-card-produto-3d-flutuante/index.html"
+  },
+  {
+    "id": "33-botao-download-progresso-sucesso",
+    "num": "33",
+    "title": "Botão de Download com Barra de Progresso Real",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Botão interativo que se preenche com porcentagem dinâmica (0 a 100%) e exibe checkmark de sucesso.",
+    "ideia": "Perfeito para download de materiais ricos, e-books, planilhas e relatórios gratuitos (iscas de leads).",
+    "has_js": true,
+    "path": "componentes/33-botao-download-progresso-sucesso/index.html"
+  },
+  {
+    "id": "34-icones-sociais-tooltip-flutuante",
+    "num": "34",
+    "title": "Ícones Sociais com Balão de Tooltip Flutuante",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Ícones de redes sociais que elevam suavemente um balão de tooltip colorido com a marca ao passar o mouse.",
+    "ideia": "Ideal para rodapés de sites corporativos, barras de contato de influenciadores e páginas de link da bio.",
+    "has_js": false,
+    "path": "componentes/34-icones-sociais-tooltip-flutuante/index.html"
+  },
+  {
+    "id": "35-pagina-404-animada-criativa",
+    "num": "35",
+    "title": "Página 404 Criativa com Astronauta Flutuante",
+    "cat": "tools",
+    "cat_name": "🛠️ Utilitários & Ferramentas",
+    "desc": "Página de erro 404 amigável com efeito de gravidade zero espacial e botão de retorno para a home.",
+    "ideia": "Essencial para não perder tráfego pago de anúncios quando o usuário cair em URLs com erro ou campanhas pausadas.",
+    "has_js": false,
+    "path": "componentes/35-pagina-404-animada-criativa/index.html"
   }
 ]

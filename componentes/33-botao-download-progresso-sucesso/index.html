@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Download com Progresso | CodeByGaurav</title>
+    <!--
+      PROJETO: Botão de Download com Barra de Progresso Real e Conclusão
+      ORIGEM: CodeByGaurav (Vídeo de Animated Download Button with Progress)
+      DATA: 01/11/2026
+      O QUE É: Botão que vira barra de progresso em porcentagem (0 a 100%) e finaliza com ícone de sucesso.
+      FINALIDADE: Download de e-books, relatórios em PDF, materiais gratuitos e aplicativos.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="download-container">
+        <h2>Baixar Relatório de Métricas 2026</h2>
+        <p class="desc">Acesse a auditoria completa de tráfego, CPA e ROAS em arquivo PDF seguro.</p>
+
+        <button class="download-btn" id="dlBtn">
+            <div class="progress-bar" id="dlProgress"></div>
+            <span class="btn-text" id="dlText">
+                <i class="fa-solid fa-cloud-arrow-down"></i> Baixar Relatório (14 MB)
+            </span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

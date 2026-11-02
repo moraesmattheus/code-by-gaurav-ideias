@@ -1,0 +1,96 @@
+/* ==========================================================================
+   PROJETO: Ícones Sociais com Tooltip - Estilos CSS
+   ORIGEM: CodeByGaurav
+   DATA: 01/11/2026
+   O QUE É: Efeito de elevação com transições cúbicas e pseudo-elementos ::before.
+   FINALIDADE: Engajamento com redes sociais em páginas institucionais.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #090d16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper {
+    display: inline-flex;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.icon {
+    position: relative;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #f8fafc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: inherit;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+    top: -46px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Cores por Marca */
+.facebook:hover, .facebook:hover .tooltip, .facebook:hover .tooltip::before { background: #1877f2; color: #fff; }
+.twitter:hover, .twitter:hover .tooltip, .twitter:hover .tooltip::before { background: #000000; color: #fff; border: 1px solid #333; }
+.instagram:hover, .instagram:hover .tooltip, .instagram:hover .tooltip::before { background: #e4405f; color: #fff; }
+.github:hover, .github:hover .tooltip, .github:hover .tooltip::before { background: #333333; color: #fff; }
+.youtube:hover, .youtube:hover .tooltip, .youtube:hover .tooltip::before { background: #cd201f; color: #fff; }
+
+.icon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
