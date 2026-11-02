@@ -1,0 +1,118 @@
+/* ==========================================================================
+   PROJETO: Botão com Borda Neon Rotativa - Estilos CSS
+   ORIGEM: Novos Estilos UI
+   DATA: 01/11/2026
+   O QUE É: Animação suave com conic-gradient rotativo em CSS puro.
+   FINALIDADE: Efeito futurista com zero JavaScript e máxima velocidade.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #090d16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+}
+
+.title {
+    color: #f8fafc;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+/* Botão Neon com Máscara e Borda Rotativa */
+.neon-border-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 14px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.neon-border-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Animação de rotação contínua */
+.btn-border {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #38bdf8, #818cf8, #38bdf8);
+    animation: rotateBorder 3s linear infinite;
+}
+
+/* Brilho volumétrico expandido */
+.btn-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, transparent, transparent, #38bdf8, #818cf8, #38bdf8);
+    animation: rotateBorder 3s linear infinite;
+    filter: blur(16px);
+    opacity: 0.6;
+}
+
+/* Conteúdo interno com fundo escuro sólido */
+.btn-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: #0f172a;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: background 0.3s;
+}
+
+.neon-border-btn:hover .btn-content {
+    background: #1e293b;
+    color: #38bdf8;
+}
+
+.btn-content i {
+    font-size: 20px;
+    color: #22c55e;
+}
+
+@keyframes rotateBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3D Tilt com Spotlight | Novos Estilos UI</title>
+    <!--
+      PROJETO: Card 3D Tilt Interativo com Brilho de Cursor (Spotlight)
+      ORIGEM: Novos Estilos UI / Tendência CodePen & Linear.app
+      DATA: 01/11/2026
+      O QUE É: Card que se inclina em perspectiva tridimensional conforme o mouse se move, com feixe de luz localizado.
+      FINALIDADE: Destacar produtos premium, planos de assinatura e seções hero de alta conversão.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tilt-card-wrapper" id="cardWrapper">
+        <div class="tilt-card" id="tiltCard">
+            <!-- Camada de luz especular que segue as coordenadas do cursor -->
+            <div class="spotlight" id="spotlight"></div>
+            
+            <div class="card-badge">PRODUTO EM DESTAQUE</div>
+            <div class="card-icon">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h2>Plano Enterprise AI</h2>
+            <p class="description">Potencialize suas conversões com agentes autônomos e automação de tráfego de ponta a ponta.</p>
+            
+            <div class="price-box">
+                <span class="currency">R$</span>
+                <span class="value">497</span>
+                <span class="period">/mês</span>
+            </div>
+
+            <ul class="features">
+                <li><i class="fa-solid fa-check"></i> Gestão de Tráfego 24/7</li>
+                <li><i class="fa-solid fa-check"></i> Relatórios de CPA em tempo real</li>
+                <li><i class="fa-solid fa-check"></i> Suporte VIP com gestor dedicado</li>
+            </ul>
+
+            <button class="cta-btn">Quero Começar Agora <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

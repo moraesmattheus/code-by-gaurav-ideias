@@ -273,5 +273,38 @@
     "ideia": "Ideal para cabeçalhos de lojas virtuais, blogs de conteúdo ou portais de suporte com alta densidade de artigos.",
     "has_js": true,
     "path": "componentes/25-animated-search-bar/index.html"
+  },
+  {
+    "id": "26-card-3d-tilt-spotlight",
+    "num": "26",
+    "title": "Card 3D Tilt com Brilho do Cursor (Spotlight)",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Card tridimensional que se inclina acompanhando a posição do mouse com reflexo especular de luz neon.",
+    "ideia": "Perfeito para o plano 'Mais Vendido' em tabelas de preços, produtos de alto ticket e heros de SaaS.",
+    "has_js": true,
+    "path": "componentes/26-card-3d-tilt-spotlight/index.html"
+  },
+  {
+    "id": "27-botao-borda-neon-rotativa",
+    "num": "27",
+    "title": "Botão com Borda Neon Rotativa (360° Conic)",
+    "cat": "buttons",
+    "cat_name": "🔘 Botões & Efeitos Visuais",
+    "desc": "Feixe contínuo de gradiente neon rotativo que circula as bordas do botão sobre fundo escuro.",
+    "ideia": "Use no botão principal de compra ou de chamada para o WhatsApp para maximizar a taxa de cliques (CTR).",
+    "has_js": false,
+    "path": "componentes/27-botao-borda-neon-rotativa/index.html"
+  },
+  {
+    "id": "28-seletor-planos-mensal-anual",
+    "num": "28",
+    "title": "Seletor de Preços Mensal vs Anual Interativo",
+    "cat": "tools",
+    "cat_name": "🛠️ Utilitários & Ferramentas",
+    "desc": "Toggle switch animado com badge de economia que recalcula os preços em tempo real com animação fluida.",
+    "ideia": "Essencial para páginas de precificação de softwares, agências e cursos para alavancar faturamento anual.",
+    "has_js": true,
+    "path": "componentes/28-seletor-planos-mensal-anual/index.html"
   }
 ]

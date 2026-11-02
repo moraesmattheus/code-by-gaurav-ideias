@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de Planos Mensal/Anual | Novos Estilos UI</title>
+    <!--
+      PROJETO: Seletor Interativo de Preços Mensal vs Anual
+      ORIGEM: Novos Estilos UI / Tendência SaaS de Alta Conversão
+      DATA: 01/11/2026
+      O QUE É: Toggle com transição de valores em tempo real e badge animada de economia.
+      FINALIDADE: Aumentar a taxa de adesão ao plano anual em sites e softwares.
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pricing-container">
+        <h2>Escolha o Plano Ideal</h2>
+        <p class="subtitle">Cancele quando quiser. Economize 20% no faturamento anual.</p>
+
+        <!-- Toggle Switch -->
+        <div class="toggle-wrapper">
+            <span class="label" id="labelMonthly">Mensal</span>
+            <button class="toggle-btn" id="togglePricing" role="switch" aria-checked="false">
+                <span class="toggle-thumb"></span>
+            </button>
+            <span class="label active" id="labelYearly">Anual</span>
+            <span class="discount-badge">ECONOMIZE 20%</span>
+        </div>
+
+        <!-- Cards de Preço -->
+        <div class="cards-grid">
+            <div class="plan-card">
+                <h3>Starter</h3>
+                <p class="plan-desc">Perfeito para quem está iniciando no tráfego.</p>
+                <div class="price-area">
+                    <span class="currency">R$</span>
+                    <span class="amount" data-monthly="97" data-yearly="77">77</span>
+                    <span class="period">/mês</span>
+                </div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> Até 3 campanhas ativas</li>
+                    <li><i class="fa-solid fa-check"></i> Dashboard básico</li>
+                    <li><i class="fa-solid fa-check"></i> Alertas por e-mail</li>
+                </ul>
+                <button class="plan-btn">Assinar Starter</button>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="popular-tag">MAIS ESCOLHIDO</div>
+                <h3>Pro Agência</h3>
+                <p class="plan-desc">Automação total para escalar múltiplos clientes.</p>
+                <div class="price-area">
+                    <span class="currency">R$</span>
+                    <span class="amount" data-monthly="197" data-yearly="157">157</span>
+                    <span class="period">/mês</span>
+                </div>
+                <ul class="features">
+                    <li><i class="fa-solid fa-check"></i> Campanhas ilimitadas</li>
+                    <li><i class="fa-solid fa-check"></i> Vigia de CPC e Palavras Negativas</li>
+                    <li><i class="fa-solid fa-check"></i> Alertas em tempo real no WhatsApp</li>
+                    <li><i class="fa-solid fa-check"></i> Exportação em PDF com sua logo</li>
+                </ul>
+                <button class="plan-btn highlight">Assinar Pro Agência</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

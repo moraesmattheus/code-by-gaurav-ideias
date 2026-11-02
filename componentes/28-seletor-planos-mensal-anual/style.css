@@ -1,0 +1,232 @@
+/* ==========================================================================
+   PROJETO: Seletor de Planos Mensal/Anual - Estilos CSS
+   ORIGEM: Novos Estilos UI
+   DATA: 01/11/2026
+   O QUE É: Design moderno com Glassmorphism e transições dinâmicas de preço.
+   FINALIDADE: Tabela de preços clara, intuitiva e persuasiva.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #090d16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.pricing-container {
+    width: 100%;
+    max-width: 820px;
+    text-align: center;
+}
+
+h2 {
+    color: #f8fafc;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Toggle Switch */
+.toggle-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 35px;
+}
+
+.label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #64748b;
+    transition: color 0.3s;
+}
+
+.label.active {
+    color: #f8fafc;
+}
+
+.toggle-btn {
+    width: 48px;
+    height: 26px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 20px;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.toggle-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translateX(22px);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toggle-btn.monthly .toggle-thumb {
+    transform: translateX(0);
+}
+
+.toggle-btn.monthly {
+    background: #374151;
+}
+
+.discount-badge {
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.plan-card {
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 35px 28px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.plan-card.featured {
+    background: linear-gradient(180deg, #162032 0%, #111827 100%);
+    border-color: #38bdf8;
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #ffffff;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.plan-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.plan-desc {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.price-area {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 25px;
+}
+
+.currency {
+    color: #38bdf8;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.amount {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.period {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.features li i {
+    color: #38bdf8;
+}
+
+.plan-btn {
+    width: 100%;
+    padding: 13px;
+    background: #1f2937;
+    border: 1px solid #374151;
+    color: #f8fafc;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.plan-btn:hover {
+    background: #374151;
+}
+
+.plan-btn.highlight {
+    background: linear-gradient(135deg, #0284c7, #2563eb);
+    border: none;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.35);
+}
+
+.plan-btn.highlight:hover {
+    background: linear-gradient(135deg, #0369a1, #1d4ed8);
+}

@@ -1,4 +1,5 @@
-<!doctype html>
+<!doctype html>
+
 <html lang="en">
 <!--
   PROJETO: Gerador de Senhas Seguras Customizável
@@ -7,93 +8,171 @@
   O QUE É: Ferramenta interativa com slider de comprimento, toggles de caracteres (maiúsculas, números, símbolos) e cópia rápida.
   FINALIDADE / APLICAÇÃO: Ótimo como ferramenta gratuita de topo de funil (lead magnet) em blogs e sites de cibersegurança ou tecnologia.
 -->
-
+
+
     <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Password Generator | CodeByGaurav</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <!-- Wrapper -->
-        <div class="container">
-            <!-- Heading -->
-            <h1>Password Generator</h1>
-
-            <!-- Input div where password display -->
-            <div class="display-container">
-                <!-- Input -->
-                <input
-                    type="text"
-                    readonly
-                    placeholder="Password"
-                    class="Display"
-                    data-passwordDisplay
-                />
-
-                <!-- copy wala button -->
-                <!-- on click text show copied -->
-                <button class="copyBtn" data-copy>
-                    <span class="copy-tooltip" data-copyMsg></span>
-                    <!-- Copywala img -->
-                    <img decoding="async"
-                        src="assets/copy.svg"
-                        alt="copy"
-                        height="23"
-                        width="23"
-                    />
-                </button>
-            </div>
-
-            <!-- input wali field where you set password checkbox -->
-            <div class="input-container">
-                <!-- password length heading and number which keep changing -->
-                <div class="length-container">
-                    <p>Password Length</p>
-                    <p data-lengthNumber>5</p>
-                </div>
-
-                <!-- ek slider bnana hai -->
-                <input
-                    type="range"
-                    min="1"
-                    max="20"
-                    step="1"
-                    class="slider"
-                    data-lengthSlider
-                />
-
-                <!-- check boxes div -->
-                <div class="checkboxgroup">
-                    <div class="check">
-                        <input type="checkbox" id="uppercase" />
-                        <label for="uppercase">Include Uppercase letters</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="lowercase" />
-                        <label for="uppercase">Include Lowercase letters</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="numbers" />
-                        <label for="uppercase">Include Numbers</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="symbols" />
-                        <label for="uppercase">Include Symbols</label>
-                    </div>
-                </div>
-
-                <!-- strength wala -->
-                <div class="strengthcontainer">
-                    <p>Strength</p>
-                    <div class="indicator" dataindicator></div>
-                </div>
-
-                <!-- Generate passowrd button -->
-                 <button class="generateButton">Generate Password</button>
-            </div>
-        </div>
-    </body>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Password Generator | CodeByGaurav</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+
+    <body>
+
+        <!-- Wrapper -->
+
+        <div class="container">
+
+            <!-- Heading -->
+
+            <h1>Password Generator</h1>
+
+
+
+            <!-- Input div where password display -->
+
+            <div class="display-container">
+
+                <!-- Input -->
+
+                <input
+
+                    type="text"
+
+                    readonly
+
+                    placeholder="Password"
+
+                    class="Display"
+
+                    data-passwordDisplay
+
+                />
+
+
+
+                <!-- copy wala button -->
+
+                <!-- on click text show copied -->
+
+                <button class="copyBtn" data-copy>
+
+                    <span class="copy-tooltip" data-copyMsg></span>
+
+                    <!-- Copywala img -->
+
+                    <i class="fa-regular fa-copy" style="font-size: 20px; color: #38bdf8; cursor: pointer;"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- input wali field where you set password checkbox -->
+
+            <div class="input-container">
+
+                <!-- password length heading and number which keep changing -->
+
+                <div class="length-container">
+
+                    <p>Password Length</p>
+
+                    <p data-lengthNumber>5</p>
+
+                </div>
+
+
+
+                <!-- ek slider bnana hai -->
+
+                <input
+
+                    type="range"
+
+                    min="1"
+
+                    max="20"
+
+                    step="1"
+
+                    class="slider"
+
+                    data-lengthSlider
+
+                />
+
+
+
+                <!-- check boxes div -->
+
+                <div class="checkboxgroup">
+
+                    <div class="check">
+
+                        <input type="checkbox" id="uppercase" />
+
+                        <label for="uppercase">Include Uppercase letters</label>
+
+                    </div>
+
+                    <div class="check">
+
+                        <input type="checkbox" id="lowercase" />
+
+                        <label for="uppercase">Include Lowercase letters</label>
+
+                    </div>
+
+                    <div class="check">
+
+                        <input type="checkbox" id="numbers" />
+
+                        <label for="uppercase">Include Numbers</label>
+
+                    </div>
+
+                    <div class="check">
+
+                        <input type="checkbox" id="symbols" />
+
+                        <label for="uppercase">Include Symbols</label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- strength wala -->
+
+                <div class="strengthcontainer">
+
+                    <p>Strength</p>
+
+                    <div class="indicator" dataindicator></div>
+
+                </div>
+
+
+
+                <!-- Generate passowrd button -->
+
+                 <button class="generateButton">Generate Password</button>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="script.js"></script>
+
 </html>
